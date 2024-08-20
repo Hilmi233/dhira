@@ -1,9 +1,9 @@
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'roboto', sans-serif;
   background: linear-gradient(to bottom right, #ff9a9e, #fad0c4, #fad0c4);
   text-align: center;
   color: #fff;
-  margin-top: 100px;
+  margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -16,12 +16,13 @@ h2 {
   font-size: 3em;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
 }
 
 p {
   font-size: 1.5em;
   color: #fff;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .button-container {
@@ -72,7 +73,8 @@ button {
 }
 
 .surprise img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   border-radius: 20px;
   margin-top: 20px;
 }
@@ -124,25 +126,9 @@ button {
   cursor: pointer;
 }
 
-/* Existing styles... */
-
-.surprise {
-  padding: 20px;
-}
-
-.surprise img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-audio {
-  margin-top: 20px;
-}
-
 /* Card Slider */
 .slider {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   margin: 20px auto;
   overflow: hidden;
@@ -175,5 +161,25 @@ audio {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .surprise img {
+    width: 100%;
+  }
+
+  .slide img {
+    width: 20vh;
   }
 }
